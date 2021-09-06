@@ -7,7 +7,7 @@ using TMPro;
 public class SetTheBar : MonoBehaviour
 {
     public Image img, Knob, Base;
-    public GameObject Reset, Exit;
+    public GameObject Reset, Exit, V1, V2;
     public TextMeshProUGUI Value;
     [HideInInspector]
     public static Bar b = new Bar();
@@ -23,6 +23,8 @@ public class SetTheBar : MonoBehaviour
         sl.interactable = true;
         s2.interactable = false;
         s2.gameObject.SetActive(false);
+        V1.gameObject.SetActive(true);
+        V2.gameObject.SetActive(true);
         Exit.SetActive(true);
         Reset.SetActive(false);
         float size = 1800f / 460;
@@ -72,6 +74,8 @@ public class SetTheBar : MonoBehaviour
             s2.gameObject.SetActive(true);
             Reset.SetActive(true);
             Base.gameObject.SetActive(true);
+            V1.gameObject.SetActive(false);
+            V2.gameObject.SetActive(false);
             Exit.SetActive(false);
             sl.interactable = false;
             dp.gameObject.SetActive(false);
@@ -83,6 +87,8 @@ public class SetTheBar : MonoBehaviour
             Base.gameObject.SetActive(false);
             s2.interactable = false;
             s2.gameObject.SetActive(false);
+            V1.gameObject.SetActive(true);
+            V2.gameObject.SetActive(true);
             Reset.SetActive(false);
             Exit.SetActive(true);
             sl.interactable = true;
